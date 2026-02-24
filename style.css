@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 42px;
+    font-family: "Roboto Condensed", sans-serif;
+    background-color: #949cff;
+    color: #ffed86;
+}
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: inherit;
+    background-color: #ef1acb;
+    /* border: 3px solid #ffed86; */
+    color: #ffed86;
+    border-radius: 15px;
+    font-weight: 700;
+    box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.255)
+    
+}
+.hide {
+    display: none;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+
+}
+.header {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.header__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+        /* Создаем градиентную заливку текста */
+    background: linear-gradient(
+        to right,
+        #ffed86 0%,
+        #ef1acb 40%,
+        #ffed86 80%,
+        #ef1acb 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    color: transparent;
+    
+    animation: shine 10s ease-in-out infinite;
+}
+@keyframes shine {
+    0% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+    100% {
+        background-position: 0% center; /* Плавно возвращаемся */
+    }
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 30px;
+    position: relative;
+    /* filter: blur(5px); */
+    pointer-events: none;
+    transition: filter ease-in-out 1s;
+}
+.field__row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.field__row-cell {
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #949cff;
+    filter: blur(5px);
+
+    width: 100px;
+    height: 100px;
+    background-color: #ffed86;
+    border-radius: 5px;
+    transition: all ease 200ms;
+}
+.field__row-cell:hover {
+    transform: scale(1.05);
+}
+
+.new-game {
+    align-self: center;
+    text-transform: uppercase;
+}
+.start-game {
+    /* display: flex;
+    justify-self: center;
+    align-self: center; */
+    pointer-events: auto;
+    position: absolute;
+    bottom: 107px;
+    left: 156px;
+    width: 200px;
+    z-index: 100;
+    animation: scaleBtn 2s ease-in-out infinite;
+    transform: translate(-50%, -50%);
+}
+@keyframes scaleBtn {
+    0% {
+        transform:  translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform:  translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform:  translate(-50%, -50%) scale(1);
+    }
+}
+.game-message {
+    color: #ffed86;
+    font-weight: 700;
+    align-self: center;
+    margin-bottom: 20px;
+}
+.mark {
+    width: 50px;
+}
+
+.active {
+    background-color: rgb(227, 45, 45)
+}
+
+/* @media (min-height: 730px) {
+    .start-game { 
+    }
+    
+} */
