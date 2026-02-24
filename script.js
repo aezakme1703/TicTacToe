@@ -95,11 +95,11 @@ function GameController() {
         }
         else if (gameStatus === 1) {
             gameOver = true
-            gameMessage = `${currentPlayer.name} выйграл!!!`
+            gameMessage = `${currentPlayer.name} выиграл!!!`
         }
         else if (gameStatus === 2) {
             gameOver = true
-            gameMessage = `${currentPlayer.name} выйграл!!!`
+            gameMessage = `${currentPlayer.name} выиграл!!!`
 
         }
         else if (gameStatus === 3) {
@@ -216,7 +216,7 @@ const newGameButton = document.querySelector('.new-game')
 const startGameButton = document.querySelector('.start-game')
 startGameButton.addEventListener('click', () => {
     fieldCell.forEach(elem => {
-        elem.style.filter = 'none'
+        elem.classList.remove('blured')
     })
     // fieldCell.style.filter = 'none'
     field.style.pointerEvents = 'auto'
